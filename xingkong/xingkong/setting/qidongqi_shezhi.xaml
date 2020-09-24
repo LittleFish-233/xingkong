@@ -1,0 +1,87 @@
+﻿<Page x:Class="xingkong.setting.qidongqi_shezhi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:xingkong.setting"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      Background="White"
+      d:DesignHeight="345" d:DesignWidth="730"
+      Title="qidongqi_shezhi">
+
+    <Grid>
+        <Button
+            x:Name="re1"
+            Click="Button_Click"
+            Margin="0,0,10,15"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Width="80" Height="30"
+                Content="保存"/>
+        <TextBlock
+                VerticalAlignment="Top"
+                Margin="10,10,5,0"
+                HorizontalAlignment="Left"
+            FontSize="16"
+                Style="{StaticResource MaterialDesignCaptionTextBlock}">
+                服务器ID：
+        </TextBlock>
+        <TextBox
+            x:Name="sever_id"
+                Text="9ff1539e6e7a11ea908800163e095b49"
+                VerticalAlignment="Top"
+                Margin="10,40,10,0"
+                Height="30"
+                HorizontalAlignment="Stretch"
+                materialDesign:TransitionAssist.DisableTransitions="True" />
+        <TextBlock
+                VerticalAlignment="Top"
+                Margin="10,80,5,0"
+            FontSize="16"
+                HorizontalAlignment="Left"
+                Style="{StaticResource MaterialDesignCaptionTextBlock}">
+                游戏路径(默认为空 无法启动再修改)：
+        </TextBlock>
+        <TextBox
+            x:Name="mc_path"
+                Text=""
+            Height="30"
+                VerticalAlignment="Top"
+                Margin="10,110,10,0"
+                HorizontalAlignment="Stretch"
+                materialDesign:TransitionAssist.DisableTransitions="True" />
+        <TextBlock
+                VerticalAlignment="Top"
+                Margin="10,150,5,0"
+            FontSize="16"
+                HorizontalAlignment="Left"
+                Style="{StaticResource MaterialDesignCaptionTextBlock}">
+                Java路径：
+        </TextBlock>
+        <TextBox
+            x:Name="java_path"
+                Text="C:\151\adxx\as5\aa5\Java.exe"
+                VerticalAlignment="Top"
+                Margin="10,180,10,0"
+            Height="30"
+                HorizontalAlignment="Stretch"
+                materialDesign:TransitionAssist.DisableTransitions="True" />
+        <TextBlock
+                VerticalAlignment="Top"
+                Margin="10,220,5,0"
+            FontSize="16"
+                HorizontalAlignment="Left"
+                Style="{StaticResource MaterialDesignCaptionTextBlock}">
+                游戏内存大小：
+        </TextBlock>
+        <TextBox
+            x:Name="mc_ram"
+                Text="2048M"
+                VerticalAlignment="Top"
+                Margin="10,250,10,0"
+            Height="30"
+                HorizontalAlignment="Stretch"
+                materialDesign:TransitionAssist.DisableTransitions="True" />
+    </Grid>
+</Page>

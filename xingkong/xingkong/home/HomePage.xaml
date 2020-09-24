@@ -1,0 +1,177 @@
+﻿<Page x:Class="xingkong.home.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:xingkong.home"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="730"
+      Title="HomePage">
+
+    <Grid>
+        <Grid Height="300" MinWidth="550"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Top"
+              Margin="0,50,0,0">
+          <Grid Height="100"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top"
+              Margin="0,0,0,0">
+            <TextBlock Text="&#xE74C;" FontSize="85"
+                       FontFamily="Segoe MDL2 Assets"
+                       Margin="5,10,0,0"/>
+            <Image Source="/information/fuwuqi.jpg"
+                   HorizontalAlignment="Left"
+                   Margin="10"/>
+            <TextBlock
+                x:Name="fuwuqi_name"
+                Margin="100,10,0,0"
+                FontWeight="Bold"
+    Style="{StaticResource MaterialDesignHeadline6TextBlock}">
+               星空神域-二测（最终测试）
+            </TextBlock>
+            <TextBlock
+                x:Name="fuwuqi_ip"
+                Margin="100,40,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+  服务器地址：mc.sky.celesy:2233
+            </TextBlock>
+            <TextBlock
+                x:Name="fuwuqi_yanci"
+                Margin="100,55,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+                
+            </TextBlock>
+            <TextBlock
+                x:Name="fuwuqi_renshu"
+                Margin="100,70,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+                
+            </TextBlock>
+        </Grid>
+            <Grid Height="100"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top"
+              Margin="0,120,0,0">
+                <TextBlock Text="&#xE74C;" FontSize="85"
+                       FontFamily="Segoe MDL2 Assets"
+                       Margin="5,10,0,0"/>
+                <Image Source="/information/user.jpg"
+                   HorizontalAlignment="Left"
+                   Margin="10"/>
+                <TextBlock
+                x:Name="username"
+                Margin="100,10,0,0"
+                FontWeight="Bold"
+    Style="{StaticResource MaterialDesignHeadline6TextBlock}">
+               LittleFish
+                </TextBlock>
+                <TextBlock
+                x:Name="degru_fangsi"
+                Margin="100,40,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+  登入方式：外置登入
+                </TextBlock>
+            </Grid>
+
+
+            <Grid
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,0,0,0">
+                <TextBlock
+                x:Name="biaoti"
+                Margin="0,10,0,0"
+                FontWeight="Bold"
+    Style="{StaticResource MaterialDesignHeadline6TextBlock}">
+               系统信息
+                </TextBlock>
+                <TextBlock
+                x:Name="text1"
+                Margin="0,40,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+  内存总大小：8192MB
+                </TextBlock>
+                <TextBlock
+                x:Name="text2"
+                Margin="0,60,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+  剩余大小：2234MB
+                </TextBlock>
+                <TextBlock
+                x:Name="text3"
+                Margin="0,80,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+  操作系统版本：win 10专业版
+                </TextBlock>
+                <TextBlock
+                x:Name="text4"
+                Margin="0,100,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+  Java版本：1.8
+                </TextBlock>
+                <TextBlock
+                x:Name="text5"
+                Margin="0,120,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+  GPU：Intel(R) HD Graphics
+                </TextBlock>
+                <TextBlock
+                x:Name="text6"
+                Margin="0,140,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+   CPU：CPU
+                </TextBlock>
+                <TextBlock
+                x:Name="text7"
+                Margin="0,160,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+  CPU核心数：4核
+                </TextBlock>
+                <TextBlock
+                x:Name="text8"
+                Margin="0,180,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+  硬盘容量：498  GB
+                </TextBlock>
+                <TextBlock
+                x:Name="text9"
+                Margin="0,200,0,0"
+    Style="{StaticResource MaterialDesignSubtitle2TextBlock}">
+  电脑型号：DELL
+                </TextBlock>
+            </Grid>
+        </Grid>
+        <TextBlock
+            x:Name="juzi"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin="10,0,10,10"
+            TextWrapping="Wrap"
+            FontSize="18"
+            TextAlignment="Center"
+    Style="{StaticResource MaterialDesignHeadline4TextBlock}">
+  我仿佛看到一次既可悲又可笑的幽灵现身，看到一个时代已经过时的幻影。
+        </TextBlock>
+        <Grid
+            Height="55"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Margin="0,0,0,100">
+            <Button
+                x:Name="re1"
+                Click="Button_Click"
+    pu:ButtonHelper.HoverBrush="#3F3F3F"
+pu:ButtonHelper.CornerRadius="25"
+    Height="50"
+    materialDesign:ButtonAssist.CornerRadius="25">
+                <TextBlock
+                    x:Name="buttontext"
+                    Margin="20,0,20,0"
+      Text="启动 星空神域" />
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

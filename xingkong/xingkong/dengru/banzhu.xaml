@@ -1,0 +1,76 @@
+﻿<Window x:Class="xingkong.dengru.banzhu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xingkong.dengru"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="banzhu" Height="400" Width="600" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image Source="/information/bg.png" Stretch="UniformToFill" Opacity="0.8"/>
+
+        <RichTextBox SpellCheck.IsEnabled="False"
+                     IsReadOnly="True"
+            VerticalAlignment="Stretch"
+            Margin="10,10,10,50"
+             AcceptsReturn="True"
+          IsDocumentEnabled="True"
+           VerticalScrollBarVisibility="Auto"
+           materialDesign:HintAssist.Hint="Multiline text">
+            <FlowDocument>
+                <Paragraph>
+                    <Run
+          FontWeight="Bold" FontSize="26">
+                        使用帮助
+                    </Run>
+                    <LineBreak />
+                    <LineBreak />
+                    <Run
+          FontSize="16">
+                        1.注册链接(下面的链接不一定正确请向你的服务器提供者索要服务器注册链接)
+                    </Run>
+                    <LineBreak />
+                    <Hyperlink
+                        Click="Hyperlink_Click"
+          Cursor="Hand">
+                        https://login2.nide8.com:233/de9dabe48db711e9921b525400b59b6a/loginreg
+                    </Hyperlink>
+                    <LineBreak />
+                    <Run
+          FontSize="16">
+                        2.使用统一通行证登入时请输入注册的用户名，而不是游戏内ID
+                    </Run>
+                    <LineBreak />
+                    <Run
+          FontSize="16">
+                        3.如果多次检查无误后仍显示“账号或密码错误”,请检查服务器ID和登录方式是否错误，如果依旧无法解决问题请联系开发者
+                    </Run>
+                    <LineBreak />
+                    <LineBreak />
+                    <Run
+          FontSize="18" FontWeight="Bold">
+                        启动器版本：Beta0.0.11，开发者：LittleFish，B站账号：未来方块
+                    </Run>
+                    <LineBreak />
+                    <Run
+          FontSize="18" FontWeight="Bold">
+                        QQ：1278490989，隶属服务器：星空神域
+                    </Run>
+
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button 
+            x:Name="re1"
+            Click="Button_Click"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,10"
+                Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                Width="100"
+                >
+            我知道了
+        </Button>
+
+    </Grid>
+</Window>

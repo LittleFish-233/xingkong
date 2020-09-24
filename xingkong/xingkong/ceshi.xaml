@@ -1,0 +1,153 @@
+﻿<pu:WindowX x:Class="xingkong.ceshi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xingkong"
+            xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+            mc:Ignorable="d"
+            Title="NavbarWindow"
+            WindowStartupLocation="CenterScreen"
+            Height="500"
+            Width="950"
+            BorderThickness="0"
+            pu:WindowXCaption.Header=" ">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Background="#3E3E3E"
+                  x:Name="re1"
+                  Margin="0,-35,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock FontSize="20"
+                           FontWeight="Light"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"
+                           FontFamily="Segoe UI"
+                           Margin="10,5,0,0">
+                    <Run>星空启动器</Run>
+                    <Run Foreground="#FF67DA82">Beta0.0.11-C</Run>
+                    <TextBlock.Effect>
+                        <DropShadowEffect Color="White"
+                                          ShadowDepth="0"
+                                          BlurRadius="10"
+                                          Opacity="0.5" />
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TreeView Grid.Row="1"
+                          x:Name="caidan"
+                          Background="Transparent"
+                          pu:TreeViewHelper.ItemHeight="60"
+                          pu:TreeViewHelper.TreeViewStyle="Modern"
+                          pu:TreeViewHelper.SelectedBackground="#22FFFFFF"
+                          BorderBrush="Gray"
+                          PreviewMouseUp="TreeView_PreviewMouseUp"
+                          Foreground="#AAFFFFFF">
+                    <TreeViewItem
+                        Tag="1"
+                                  IsSelected="True"
+                                  Padding="10,0,0,0" >
+                        <TreeViewItem.Header>
+                            <Grid>
+                                <Image Source="/information/icon/homepage.png"
+                                       Height="32"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"/>
+                                <TextBlock Text="主页" 
+                                           FontSize="22"
+                                           VerticalAlignment="Center"
+                                           Margin="40,0,0,0"
+                                           Foreground="#AAFFFFFF"/>
+                            </Grid>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem Tag="2"
+                                  Padding="10,0,0,0" >
+                        <TreeViewItem.Header>
+                            <Grid>
+                                <Image Source="/information/icon/mc.png"
+                                       Height="32"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"/>
+                                <TextBlock Text="游戏" 
+                                           FontSize="22"
+                                           VerticalAlignment="Center"
+                                           Margin="40,0,0,0"
+                                           Foreground="#AAFFFFFF"/>
+                            </Grid>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem Tag="3"
+                                  Padding="10,0,0,0" >
+                        <TreeViewItem.Header>
+                            <Grid>
+                                <Image Source="/information/icon/zhanghu.png"
+                                       Height="32"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"/>
+                                <TextBlock Text="个人信息" 
+                                           FontSize="22"
+                                           VerticalAlignment="Center"
+                                           Margin="40,0,0,0"
+                                           Foreground="#AAFFFFFF"/>
+                            </Grid>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem Tag="4"
+                                  Padding="10,0,0,0" >
+                        <TreeViewItem.Header>
+                            <Grid>
+                                <Image Source="/information/icon/setup.png"
+                                       Height="32"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"/>
+                                <TextBlock Text="设置" 
+                                           FontSize="22"
+                                           VerticalAlignment="Center"
+                                           Margin="40,0,0,0"
+                                           Foreground="#AAFFFFFF"/>
+                            </Grid>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem Tag="5"
+                                  Padding="10,0,0,0" >
+                        <TreeViewItem.Header>
+                            <Grid>
+                                <Image Source="/information/icon/stealth.png"
+                                       Height="32"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"/>
+                                <TextBlock Text="用户手册" 
+                                           FontSize="22"
+                                           VerticalAlignment="Center"
+                                           Margin="40,0,0,0"
+                                           Foreground="#AAFFFFFF"/>
+                            </Grid>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                </TreeView>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Rectangle Fill="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <Image Source="/information/bg.png" Stretch="UniformToFill">
+                    <Image.Effect>
+                        <BlurEffect Radius="8"></BlurEffect>
+                    </Image.Effect>
+
+                </Image>
+                
+                <Frame HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+            x:Name="zhu_frame" NavigationUIVisibility="Hidden"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</pu:WindowX>

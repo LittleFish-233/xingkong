@@ -1,0 +1,54 @@
+﻿<Page x:Class="xingkong.setting.zhu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:xingkong.setting"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      Background="White"
+      d:DesignHeight="400" d:DesignWidth="730"
+      Title="zhu">
+
+    <Grid>
+        <ToolBarTray Height="55"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Top">
+            <ToolBar
+               Style="{DynamicResource MaterialDesignToolBar}"
+                ClipToBounds="False">
+                <Button
+                    Click="Button_Click"
+                        ToolTip="更改启动器信息">
+                    <Grid>
+                        <materialDesign:PackIcon
+                                 Kind="SettingsTransfer" />
+                        <TextBlock Margin="30,0,0,0"
+                              Style="{StaticResource MaterialDesignSubtitle1TextBlock}">
+                                    启动器设置
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Separator />
+                <Button
+                    Click="Button_Click_1"
+                        ToolTip="设置启动器的UI风格">
+                    <Grid>
+                        <materialDesign:PackIcon
+                                 Kind="FormatColourHighlight" />
+                        <TextBlock Margin="30,0,0,0"
+                              Style="{StaticResource MaterialDesignSubtitle1TextBlock}">
+                                    个性化
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Separator />
+
+            </ToolBar>
+        </ToolBarTray>
+        <Frame x:Name="zhu_page" 
+               VerticalAlignment="Stretch"
+               HorizontalAlignment="Stretch"
+               Margin="0,55,0,0"/>
+    </Grid>
+</Page>
