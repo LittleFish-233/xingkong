@@ -546,6 +546,8 @@ namespace xingkong.daima
         /// <returns>解析的字符串</returns>
         public static string[] auth_huoquxinxi(string str)
         {
+            try
+            {
             var json = (JObject)JsonConvert.DeserializeObject(str);
             var meta = json["meta"];
             var json1 = (JObject)JsonConvert.DeserializeObject(meta.ToString());
@@ -556,6 +558,12 @@ namespace xingkong.daima
             result[0] = serverName.ToString();
             //返回结果
             return result;
+
+            }
+            catch
+            {
+                return null;
+            }
         }
         /// <summary>
         /// 解析外置登入 第一次登入后返回的数据
@@ -753,18 +761,24 @@ namespace xingkong.daima
 
         public static string HttpGet(string Url, string postDataStr)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url + (postDataStr == "" ? "" : "?") + postDataStr);
-            request.Method = "GET";
-            request.ContentType = "application/json";
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url + (postDataStr == "" ? "" : "?") + postDataStr);
+                request.Method = "GET";
+                request.ContentType = "application/json";
 
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            Stream myResponseStream = response.GetResponseStream();
-            StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.GetEncoding("utf-8"));
-            string retString = myStreamReader.ReadToEnd();
-            myStreamReader.Close();
-            myResponseStream.Close();
-
-            return retString;
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                Stream myResponseStream = response.GetResponseStream();
+                StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.GetEncoding("utf-8"));
+                string retString = myStreamReader.ReadToEnd();
+                myStreamReader.Close();
+                myResponseStream.Close();
+                return retString;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary> 
